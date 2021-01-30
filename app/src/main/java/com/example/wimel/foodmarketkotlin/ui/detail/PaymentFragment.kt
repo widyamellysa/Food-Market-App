@@ -1,31 +1,32 @@
-package com.example.wimel.foodmarketkotlin.ui.auth.signup
+package com.example.wimel.foodmarketkotlin.ui.detail
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.example.wimel.foodmarketkotlin.R
-import com.readystatesoftware.chuck.internal.ui.MainActivity
-import kotlinx.android.synthetic.main.fragment_signup_success.*
+import kotlinx.android.synthetic.main.fragment_payment.*
 
-class SignupSuccessFragment : Fragment() {
+class PaymentFragment : Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_signup_success, container, false)
+        return inflater.inflate(R.layout.fragment_payment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        btnFind.setOnClickListener {
-            val home = Intent(activity, MainActivity::class.java)
-            startActivity(home)
-            activity?.finishAffinity()
+        (activity as DetailActivity).toolbarPayment()
+
+        btnCheckout.setOnClickListener{
+            Navigation.findNavController(it).navigate(R.id.action_payment_success)
         }
     }
+
 }

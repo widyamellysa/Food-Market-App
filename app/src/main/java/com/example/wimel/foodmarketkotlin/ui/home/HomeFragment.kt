@@ -1,5 +1,6 @@
 package com.example.wimel.foodmarketkotlin.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wimel.foodmarketkotlin.R
 import com.example.wimel.foodmarketkotlin.model.dummy.HomeModel
+import com.example.wimel.foodmarketkotlin.ui.detail.DetailActivity
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment(), HomeAdapter.ItemAdapterCallback {
@@ -50,6 +52,7 @@ class HomeFragment : Fragment(), HomeAdapter.ItemAdapterCallback {
     }
 
     override fun onClick(v: View, data: HomeModel) {
-        Toast.makeText(context, "test click", Toast.LENGTH_LONG).show()
+        val detail = Intent(activity, DetailActivity::class.java)
+        startActivity(detail)
     }
 }

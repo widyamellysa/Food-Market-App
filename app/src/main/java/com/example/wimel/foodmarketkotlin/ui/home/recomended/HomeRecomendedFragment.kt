@@ -1,5 +1,6 @@
 package com.example.wimel.foodmarketkotlin.ui.home.recomended
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wimel.foodmarketkotlin.R
 import com.example.wimel.foodmarketkotlin.model.dummy.HomeVerticalModel
+import com.example.wimel.foodmarketkotlin.ui.detail.DetailActivity
 import com.example.wimel.foodmarketkotlin.ui.home.newtaste.HomeNewTasteAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -44,7 +46,8 @@ class HomeRecomendedFragment : Fragment(), HomeNewTasteAdapter.ItemAdapterCallba
     }
 
     override fun onClick(v: View, data: HomeVerticalModel) {
-        Toast.makeText(context, "Percobaan klik item"+data.title,  Toast.LENGTH_SHORT).show()
+        val detail = Intent(activity, DetailActivity::class.java)
+        startActivity(detail)
     }
 
 }

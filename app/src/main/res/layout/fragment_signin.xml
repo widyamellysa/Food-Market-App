@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF"
-    android:layout_marginTop="25dp"
+    android:layout_marginTop="24dp"
     android:paddingLeft="24dp"
     android:paddingRight="24dp"
     android:paddingTop="26dp"
@@ -18,10 +18,11 @@
         android:text="Email Address" />
 
     <EditText
-        android:padding="10dp"
+        android:id="@+id/etEmail"
         android:layout_marginTop="6dp"
-        android:background="@drawable/ic_shape_rectangle6"
+        android:padding="10dp"
         style="@style/EditText.PoppinsNormal14sp8D92A3"
+        android:background="@drawable/shape_rectangle_outline_8_020202"
         android:hint="Type your email address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -34,30 +35,31 @@
         android:text="Password" />
 
     <EditText
+        android:id="@+id/etPassword"
         android:inputType="textPassword"
         android:padding="10dp"
-        android:background="@drawable/ic_shape_rectangle6"
         style="@style/EditText.PoppinsNormal14sp8D92A3"
+        android:background="@drawable/shape_rectangle_outline_8_020202"
         android:hint="Type your password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/btnSignin"
+        android:text="Sign In"
         android:textAllCaps="false"
         android:layout_marginTop="24dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         style="@style/Button.Primary"
-        android:text="Sign In"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/btnSignup"
+        android:text="Create New Account"
         android:textAllCaps="false"
         android:layout_marginTop="12dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         style="@style/Button.Secondary"
-        android:text="Create New Account"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

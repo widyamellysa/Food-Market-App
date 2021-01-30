@@ -4,14 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:orientation="vertical"
-    tools:context=".ui.auth.signup.SignupFragment">
+    tools:context=".ui.auth.signin.SigninFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFF"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="24dp"
         android:paddingLeft="24dp"
         android:paddingRight="24dp"
         android:paddingTop="26dp"
@@ -25,10 +24,11 @@
             android:text="Phone No." />
 
         <EditText
-            android:padding="10dp"
+            android:id="@+id/etPhoneNumber"
             android:layout_marginTop="6dp"
-            android:background="@drawable/ic_shape_rectangle6"
+            android:padding="10dp"
             style="@style/EditText.PoppinsNormal14sp8D92A3"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
             android:hint="Type your phone number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -41,10 +41,11 @@
             android:text="Address" />
 
         <EditText
-            android:padding="10dp"
+            android:id="@+id/etAddress"
             android:layout_marginTop="6dp"
-            android:background="@drawable/ic_shape_rectangle6"
+            android:padding="10dp"
             style="@style/EditText.PoppinsNormal14sp8D92A3"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
             android:hint="Type your address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -57,11 +58,11 @@
             android:text="House No." />
 
         <EditText
-            android:inputType="textPassword"
+            android:id="@+id/etHouseNumber"
             android:padding="10dp"
-            android:background="@drawable/ic_shape_rectangle6"
             style="@style/EditText.PoppinsNormal14sp8D92A3"
-            android:hint="Type your house number"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            android:hint="Type your house no"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -73,23 +74,22 @@
             android:text="City" />
 
         <EditText
-            android:inputType="textPassword"
+            android:id="@+id/etCity"
             android:padding="10dp"
-            android:background="@drawable/ic_shape_rectangle6"
             style="@style/EditText.PoppinsNormal14sp8D92A3"
-            android:hint="Select your city"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            android:hint="Type your city"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <Button
             android:id="@+id/btnSignUpNow"
+            android:text="Sign Up Now"
             android:textAllCaps="false"
             android:layout_marginTop="24dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             style="@style/Button.Primary"
-            android:text="Sign Up Now"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
-
 </androidx.core.widget.NestedScrollView>
